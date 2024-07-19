@@ -1,0 +1,105 @@
+<section class="gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+
+  
+                  <form [formGroup]="userForm" >
+                    <h2>Enter your details here...!</h2>
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label">Username</label>
+                      <input type="text"  class="form-control"
+                        placeholder="Enter your name"  formControlName="username"/>
+                    </div>
+  
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label">Email</label>
+                      <input type="email"  class="form-control"
+                        placeholder="Enter your email address" formControlName="email"/>
+                    </div>
+  
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" >Password</label>
+                      <input type="password" class="form-control" formControlName="password" />
+                    </div>
+
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" >Phone number</label>
+                      <input type="text" class="form-control" formControlName="phone" />
+                    </div>
+
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" >Designation</label>
+                      <input type="text" class="form-control" formControlName="designation" />
+                    </div>
+                    
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" >City</label>
+                      <input type="text" class="form-control" formControlName="city"/>
+                    </div> 
+
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" >State</label>
+                      <input type="text" class="form-control" formControlName="state"/>
+                    </div>
+
+                    <div data-mdb-input-init class="form-outline mb-4">
+
+                        <h6 class="mb-2 pb-1">Gender: </h6>
+      
+                          <input class="form-check-input" type="radio" name="gender" id="femaleGender"
+                            value="female" checked formControlName="gender"/>
+                          <label class="form-check-label" for="femaleGender">Female</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="maleGender"
+                              value="male" formControlName="gender" />
+                            <label class="form-check-label" for="maleGender">Male</label>
+                          </div>
+        
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="otherGender"
+                              value="others" formControlName="gender" />
+                            <label class="form-check-label" for="otherGender">Other</label>
+                          </div>
+                   
+
+                    <div class="text-center pt-1 mb-5 pb-1">
+                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" (click)="submit()">Submit</button>
+                    </div>
+
+  
+                  </form>
+  
+                </div>
+              </div>
+              <!-- <div class="col-lg-6 d-flex align-items-center gradient-custom-2"> -->
+              <div class="col-lg-6  align-items-center gradient-custom-2">
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4" *ngIf="userDetails">
+                  <h3 class="mb-4">User details</h3>
+                  <p class="small mb-0 p-3">Name:    {{userDetails.username}}</p>
+                  <p class="small mb-0 p-3">Email:   {{userDetails.email}}</p>
+                  <p class="small mb-0 p-3">Password: {{userDetails.password}}</p>
+                  <p class="small mb-0 p-3">Phone:  {{userDetails.phone}}</p>
+                  <p class="small mb-0 p-3">Designation: {{userDetails.designation}}</p>
+                  <p class="small mb-0 p-3">City: {{userDetails.city}}</p>
+                  <p class="small mb-0 p-3">State: {{userDetails.state}}</p>
+                  <p class="small mb-0 p-3">Gender: {{userDetails.gender}}</p>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center">
+                  <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block  m-3 align-items-center text-align-center"
+                  style="background-color: #dd3675;border:1px solid white" type="button" *ngIf="tableBtn" (click)="table()">Show Table</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

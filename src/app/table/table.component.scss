@@ -1,0 +1,46 @@
+.flexDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    float: left;
+}
+
+.mat-icon {
+    padding: 1px;
+}
+
+table {
+    width: 80%;
+   
+}
+
+.mat-elevation-z8 {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // margin: 30px;
+    margin: 50px 20px 0px 60px;
+}
+.mat-mdc-header-row{
+    background-color: #b44593;
+    color: white;
+}
+// tr.mat-mdc-header-row{
+//    height: 35px;
+// }
+// tr.mat-mdc-row{
+//     height: 40px;
+// }
+tr.mat-mdc-row:nth-child(even){
+// background-color: #f2bae1;
+background-color: #f4e9f0;
+}
+
+
+.mat-mdc-table .mat-mdc-header-cell {
+    background: inherit;
+    text-align: center;
+}
